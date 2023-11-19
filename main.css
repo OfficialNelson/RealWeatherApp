@@ -10,6 +10,10 @@ body {
   font-size: 120%;
 }
 
+h2 {
+  display:inline;
+}
+
 .card {
   background: #000000d0;
   color: white;
@@ -83,4 +87,18 @@ h1.temp {
   position: absolute;
   top: 0;
   left: 20px;
+}
+
+.time {
+  font-size: small;
+  margin-bottom: 1em;
+}
+.footnote {
+  font-size: small;
+  margin-top: .3em; 
+  color:bisque;
+}
+
+.temp:hover {
+  cursor: pointer;
 }
