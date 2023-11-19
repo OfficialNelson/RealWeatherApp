@@ -7,11 +7,11 @@ body {
   font-family: 'Open Sans', sans-serif;
   background: #222;
   background-image: url('https://source.unsplash.com/1600x900/?landscape');
-  font-size: 120%;
+  font-size: 150%;
 }
 
 h2 {
-  display:inline;
+  display: inline;
 }
 
 .card {
@@ -22,12 +22,29 @@ h2 {
   width: 100%;
   max-width: 420px;
   margin: 1em;
+  text-align: center; /* Center text within the card */
 }
 
 .search {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column; /* Added to stack search bar and button vertically */
+  margin-bottom: 20px;
+}
+
+input.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background: #7c7c7c2b;
+  color: white;
+  font-family: inherit;
+  font-size: 105%;
+  width: calc(100% - 100px);
+  margin-bottom: 10px; /* Added for spacing between search bar and button */
+  text-align: center; /* Center the text within the search bar */
 }
 
 button {
@@ -43,18 +60,6 @@ button {
   transition: 0.2s ease-in-out;
 }
 
-input.search-bar {
-  border: none;
-  outline: none;
-  padding: 0.4em 1em;
-  border-radius: 24px;
-  background: #7c7c7c2b;
-  color: white;
-  font-family: inherit;
-  font-size: 105%;
-  width: calc(100% - 100px);
-}
-
 button:hover {
   background: #7c7c7c6b;
 }
@@ -67,11 +72,14 @@ h1.temp {
 .flex {
   display: flex;
   align-items: center;
+  justify-content: center; /* Center the infographic horizontally */
+  flex-direction: column; /* Stack icon and description vertically */
+  text-align: center; /* Center text within the flex container */
 }
 
 .description {
   text-transform: capitalize;
-  margin-left: 8px;
+  margin-top: 8px; /* Added for spacing between icon and description */
 }
 
 .weather.loading {
@@ -89,14 +97,24 @@ h1.temp {
   left: 20px;
 }
 
+.time,
+.feels_like,
+.temp_max,
+.temp_min,
+.humidity,
+.wind {
+  text-align: center; /* Center text for State, Time, Temperature, Feels Like, High, Low, Humidity, and Wind Speed */
+}
+
 .time {
   font-size: small;
   margin-bottom: 1em;
 }
+
 .footnote {
   font-size: small;
-  margin-top: .3em; 
-  color:bisque;
+  margin-top: .3em;
+  color: bisque;
 }
 
 .temp:hover {
